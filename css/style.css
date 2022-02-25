@@ -6,6 +6,11 @@
     --darkBlue: #0000ff;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
 body{
     background-color: var(--backgroundColor);
     font-family: 'Montserrat', sans-serif;
@@ -43,6 +48,7 @@ body{
     max-height: 660px;
     background-color: var(--transparentBlue);
     border-radius: 10px;
+    box-shadow: 0 0 5px var(--darkBlue);
 }
 
 /* Modal */
@@ -50,26 +56,60 @@ body{
     border-radius: 5px;
 }
 
-form input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid var(--transparentBlue);
-    border-radius: 4px;
-    box-sizing: border-box;
-} 
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+  }
 
-form input[type=submit] {
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div input {
     width: 100%;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
- form input[type=submit]:hover {
-    background-color: var(--transparentBlue);
-    color: var(--regularBlue);
+  form div {
+    position: relative;
+    margin-bottom: 15px;
   }
+  
+  input:focus {
+    border: 2px solid #f2796e;
+  }
+
+  form div i {
+    position: absolute;
+    padding: 10px;
+  }
+
+.fa-exclamation,
+.error {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+/* .fa-exclamation,
+.fa-check {
+  right: 0;
+  opacity: 0;
+} */
+
