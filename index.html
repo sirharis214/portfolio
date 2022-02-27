@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/ba44f6fe56.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrapper d-flex justify-content-center">
+    <div class="wrapper d-flex justify-content-around">
         <!-- A background image to take over entire view-->
         <div class="main-background-img">
             <img src="images/blue_background.jpg" alt="Blue Background">
@@ -35,14 +35,14 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="mainForm">
+                <form id="mainForm" class="d-flex flex-column justify-content-center">
                     <!--Username-->
                     <div>
-                        <label for="username">Your Name</label>
+                        <label for="username">Enter Your Name</label>
                         <i class="fa-solid fa-circle-user"></i>
                         <input type="text" name="username" id="username" placeholder="Name"/>
-                        <i class="fa-solid fa-exclamation"></i>
-                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-exclamation failure-icon"></i>
+                        <i class="fa-solid fa-check success-icon"></i>
                         <div class="error"></div>
                     </div>
                     <!--Submit Button-->
@@ -63,7 +63,7 @@
             setTimeout(() => { myModal.show() }, 2000);
         }); //window
     </script>
+    <!-- Form Validation -->
     <script src="js/mainForm.js"></script>
-    
 </body>
 </html>

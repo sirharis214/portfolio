@@ -4,102 +4,107 @@
     --transparentBlue: #e6e6ff;
     --regularBlue: #8080ff;
     --darkBlue: #0000ff;
+    --red: #ff0000;
+    --green: #00b300;
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
 }
 body{
-    background-color: var(--backgroundColor);
-    font-family: 'Montserrat', sans-serif;
+  background-color: var(--backgroundColor);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
 }
 .text-center {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 /* Main wrapper */
 .wrapper{
-    position: relative;
+  position: relative;
+  min-height: 100vh;
 }
 
 /* Main background image */
 .main-background-img{
-    position: absolute;
+  position: absolute;
 }
 .main-background-img img{
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
 }
 
 /* Main content */
 .main-content{
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 20%;
-    width: 100%;
-    max-width: 330px;
-    height: 100%;
-    max-height: 660px;
-    background-color: var(--transparentBlue);
-    border-radius: 10px;
-    box-shadow: 0 0 5px var(--darkBlue);
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 20%;
+  width: 100%;
+  max-width: 330px;
+  height: 100%;
+  max-height: 660px;
+  /* background-color: var(--transparentBlue); */
+  background: rgb(230, 230, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--regularBlue);
 }
 
 /* Modal */
 .modal .modal-body form input{
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* Form */
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-  }
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  padding: 40px;
+}
 
 form label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 form div input {
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    outline: none;
-    border: 2px solid #c4c4c4;
-    padding: 0 30px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  form div {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-  input:focus {
-    border: 2px solid #f2796e;
-  }
-
-  form div i {
-    position: absolute;
-    padding: 10px;
-  }
-
-.fa-exclamation,
-.error {
-  color: red;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.fa-check {
-  color: green;
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border: 2px solid var(--regularBlue);
+}
+
+form div i {
+  position: absolute;
+  padding: 10px;
+}
+
+.failure-icon,
+.error {
+  color: var(--red);
+}
+
+.success-icon {
+  color: var(--green);
 }
 
 .error {
@@ -107,9 +112,32 @@ form div input {
   margin-top: 5px;
 }
 
-/* .fa-exclamation,
-.fa-check {
+.failure-icon,
+.success-icon {
   right: 0;
   opacity: 0;
-} */
+}
 
+/* Media Queries */
+/* For screens with Width of 900px */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  form,
+  .main-content {
+    width: 100%;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+}
+
+/* For screens with a width from 425px */
+@media (max-width: 425px) {
+  form {
+    padding: 20px;
+  }
+} 
