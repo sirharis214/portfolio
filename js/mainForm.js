@@ -39,5 +39,11 @@ let engine = (id, serial, message) => {
         // icons
         failureIcon[serial].style.opacity = "0";
         successIcon[serial].style.opacity = "1";
+        
+        // Save username to Session.
+        var user = {'username':id.value.trim()};
+        sessionStorage.setItem('user', JSON.stringify(user));
+        // var obj = JSON.parse(sessionStorage.user);
+        // console.log(obj);
     }
 }
