@@ -4,8 +4,8 @@ $(document).ready(function(){
 
     function getLocationInfo(){
         // Get user location
-        let locationApiKey = "X";
-        let weatherApiKey = "X";
+        let locationApiKey = "7b566f851df149c69221e0420b146f4d";
+        let weatherApiKey = "XUKVN3WE23LZ638XJ24FQR77X";
         $.ajax({
             type: "GET",
             url: `https://ipgeolocation.abstractapi.com/v1/?api_key=${locationApiKey}`,
@@ -14,10 +14,6 @@ $(document).ready(function(){
                 // console.log(locationData);
                 let city = locationData['city'];
                 let zipcode = locationData['postal_code'];
-                // let lat = locationData['latitude'];
-                // let long = locationData['longitude'];
-                // console.log(`City: ${city} Lat: ${lat}  Long: ${long}`);
-                // console.log(`City: ${city} AND Zipcode: ${zipcode}`);
                 
                 setTimeout(getLocationWeather, timeDelay);  // MAKE THE AJAX CALL AFTER A FEW SECONDS DELAY.
                 function getLocationWeather(){

@@ -42,8 +42,10 @@ let engine = (id, serial, message) => {
         
         // Save username to Session.
         var user = {'username':id.value.trim()};
-        sessionStorage.setItem('user', JSON.stringify(user));
-        // var obj = JSON.parse(sessionStorage.user);
+        sessionStorage.setItem('username', JSON.stringify(user));
+        // var obj = JSON.parse(sessionStorage.username);
         // console.log(obj);
+        // Re-Direct to Home page
+        window.location.href = "sample.html";
     }
 }
