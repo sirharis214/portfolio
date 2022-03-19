@@ -18,40 +18,80 @@
 </head>
 <body>
   <!-- Navbar-->
-  <nav>
-    <!-- Logo + Name -->
-    <div class="container-fluid d-flex">
-      <div class="me-auto p-2">
-        <a class="navbar-brand" href="#">
-          <img src="images/brand_logo.png" alt="" width="50" height="50">
-          Haris Nasir
-        </a>    
+  <nav class="fixed-top">
+    <div class="logoNav">
+      <!-- Logo + Name -->
+      <div class="container-fluid d-flex">
+        <div class="me-auto p-2">
+          <a class="navbar-brand" href="#">
+            <img src="images/brand_logo.png" alt="" width="50" height="50">
+            Haris Nasir
+          </a>    
+        </div>
+        <!-- Navbar Elements -->
+        <div class="navRight p-2">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Project 1</a></li>
+                <li><a class="dropdown-item" href="#">Project 1</a></li>
+                <li><a class="dropdown-item" href="#">Project 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul> <!--.dropdown-menu-->
+            </li>
+          </ul> <!--.nav-->
+        </div> <!--.p-2-->
+      </div> <!--.container-fluid d-flex-->
+    </div>
+    <div class="barButton p-2">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul> <!--.dropdown-menu-->
+              </li>
+            </ul> <!--.nav-->
+          </div>
+        </div>
       </div>
-      <!-- Navbar Elements -->
-      <div class="p-2">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Project 1</a></li>
-              <li><a class="dropdown-item" href="#">Project 1</a></li>
-              <li><a class="dropdown-item" href="#">Project 1</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul> <!--.dropdown-menu-->
-          </li>
-        </ul> <!--.nav-->
-      </div> <!--.p-2-->
-    </div> <!--.container-fluid d-flex-->
+    </div> <!-- .barButton-->
   </nav>
   <!-- Background Image -->
   <div class="background">
@@ -59,7 +99,7 @@
   </div>
   <!-- Main Intro-->
   <div class="main-intro text-center">
-    <p>Software and DevOps Engineer</p>
+    <p>Software and DevOps Specialist</p>
     <h2>Haris Nasir</h2>
     <div class="main-btn">
       <button class="btn btn-primary" type="button">Contact</button>
@@ -110,7 +150,7 @@
         and a Bachelors degree in Information Techonology from <strong><a href="https://www.njit.edu/about">NJIT</a></strong>. 
         Beyond that I am working towards completing various certifications as a badge to varify my knowledge in these technologies. 
         Knowledge and Practice of these fields are two very different things. 
-        I'm able to put into practice the knowledge that I have, but i would also like to showcase that I have a thorough understanding of the technologies as well.</p>
+        I'm able to put into practice the knowledge that I have, but i would also like to showcase that I have a thorough understanding of the technologies as well. <br><br>I'm currently study to get my certification in <strong>AWS Certified Cloud Practitioner and Certified Developer Associate</strong>, As well as a certificate for <strong>CompTIA SecurityPlus+</strong></p>
     </div>
     <div class="cert-list d-flex justify-content-between align-items-center">
       <div class="cert1">
@@ -139,6 +179,88 @@
           </div>
         </div>
       </div> <!--.cert1-->
+    </div>
+  </div> <!--.certifications-->
+
+  <!-- Projects-->
+  <div class="projects d-flex flex-column justify-content-center align-items-center">
+    <p class="mini-heading">A Glimpse Of My Work</p>
+    <h2 class="main-heading">Current Projects</h2>
+    <div class="projectsList d-flex justify-content-between align-items-center">
+      <div class="cert1">
+        <div class="img"><img src="images/GAS.jpeg" alt="Google Apps Script"></div>
+        <div class="certDetails d-flex flex-column justify-content-center">
+          <div class="certName d-flex justify-content-between align-items-center"> 
+            <div class="certNameDetails">
+              <h4>Scripting</h4>
+              <p>Google AppScripts</p>
+            </div>
+            <div class="certIcon">
+              <i class="fa-brands fa-google fa-xl"></i>
+            </div>
+          </div>
+          <div class="certSubname d-flex justify-content-between align-items-center">
+            <p>Automating manual tasks in Google Application <br>through the scripting capabilites of Google AppScripts. Powered by ES6 Javascript.</p>
+          </div>
+        </div>
+      </div> <!--.cert1-->
+      <div class="cert1">
+        <div class="img"><img src="images/LAMPStack.jpg" alt="Linux Apache2 MySQL PHP"></div>
+        <div class="certDetails d-flex flex-column justify-content-center">
+          <div class="certName d-flex justify-content-between align-items-center"> 
+            <div class="certNameDetails">
+              <h4>Full Stack Dev</h4>
+              <p>LAMP Stack Development</p>
+            </div>
+            <div class="certIcon">
+              <i class="fa-solid fa-layer-group fa-xl"></i>
+            </div>
+          </div>
+          <div class="certSubname d-flex justify-content-between align-items-center">
+            <p>Creating and maintaining all aspects of a Full Stack Dev enviroment.<br>Primarily experienced in LAMP software bundle.</p>
+          </div>
+        </div>
+      </div> <!--.cert1-->
+      <div class="cert1">
+        <div class="img"><img src="images/awsCloud.png" alt="Google Apps Script"></div>
+        <div class="certDetails d-flex flex-column justify-content-center">
+          <div class="certName d-flex justify-content-between align-items-center"> 
+            <div class="certNameDetails">
+              <h4>Cloud</h4>
+              <p>AWS cloud services</p>
+            </div>
+            <div class="certIcon">
+              <i class="fa-brands fa-google fa-xl"></i>
+            </div>
+          </div>
+          <div class="certSubname d-flex justify-content-between align-items-center">
+            <p>Creating and managing entire operation framework in AWS,<br>utilizing cloud services such as EC2, RDS, Route53 and more.</p>
+          </div>
+        </div>
+      </div> <!--.cert1-->
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact d-flex justify-content-center align-items-center">
+    <div class="form text-center">
+      <h2>Leave me a message.</h2>
+      <div class="userContact d-flex flex-column justify-content-start align-items-start">
+        <input type="text" name="contactName" placeholder="Name">
+        <input type="email" name="contactEmail" placeholder="Your Email">
+        <textarea name="contactMessage" id="contactMessage" cols="30" rows="10" placeholder="Message"></textarea>
+        <input name="contactSubmit" class="btn btn-primary" type="submit" placeholder="Message" value="Send">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer d-flex justify-content-evenly align-items-center">
+    <div class="footAdmin">
+      <h4>Website created using pure HTML | CSS | Javascript | Bootstrap5</h4>
+    </div>
+    <div class="footMessage">
+      <p>Website Created and Managed by Haris Nasir.</p>
     </div>
   </div>
 </body>

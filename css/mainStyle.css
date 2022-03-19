@@ -5,9 +5,10 @@
     --lightBlue: #01a7c7;
     --blue: #0998ff;
     --darkerBlue: #0d6efd;
-    --white: #fcfcfc;
+    --white: #f9f9f9;
     --black: #010101;
     --gray: #141414;
+    --lightGray: #696969;
     --heading-font: 'Montserrat';
     --subheading-font: 'Questrial';
 }
@@ -29,6 +30,22 @@ body nav{
     font-size: 1.25em;
     font-weight: 700;
     background-color:  var(--black);
+}
+
+body nav .barButton{
+    font-size: 1rem;
+    display: none;
+}
+body nav .barButton i{
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+body nav .barButton .dropdown-menu{
+    background-color: var(--gray);
+}
+body nav .barButton .dropdown-menu a{
+    color: var(--blue);
+    font-weight: 600;
 }
 body nav .nav .nav-link:hover{
     color: var(--white);
@@ -210,4 +227,131 @@ nav .nav .dropdown .dropdown-menu a{
 }
 .certifications .cert-list p{
     font-family: var(--subheading-font), sans-serif;
+}
+
+/* Projects */
+.projects{
+    padding: 7rem 8rem;
+}
+.projects .mini-heading{
+    font-size: 1.3rem;
+    color: var(--lightBlue);
+    padding: 6px;
+    text-align: center;
+}
+
+.projects .main-heading{
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding-bottom: 50px;
+    color: var(--darkerBlue);
+    text-align: center;
+}
+
+.projects .projectsList{
+
+}
+.projects .projectsList .cert1{
+    width: 30%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: var(--white);
+    box-shadow:
+        0px 2px 3.6px rgba(0, 0, 0, 0.031),
+        0px 5.6px 10px rgba(0, 0, 0, 0.045),
+        0px 13.6px 24.1px rgba(0, 0, 0, 0.059),
+        0px 45px 80px rgba(0, 0, 0, 0.09);
+}
+.projects .projectsList .cert1 .img img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    padding: 0 10px; /* top/bottom  left/right */
+}
+.projects .projectsList .cert1 .certDetails{
+    padding-bottom: 10px;
+}
+.projects .projectsList .cert1 .certDetails .certName{
+    padding: 5px 20px 0 20px;
+}
+.projects .projectsList .cert1 .certDetails .certName .certNameDetails h4{
+    color: var(--darkerBlue);
+    font-size: 1.7rem;
+}
+.projects .projectsList .cert1 .certDetails .certName .certNameDetails p{
+    color: var(--blue);
+    font-size: 1.1rem;
+}
+.projects .projectsList .cert1 .certDetails .certName .certIcon{
+    color: var(--darkerBlue);
+}
+.projects .projectsList .cert1 .certDetails .certSubname{
+    padding: 15px 30px 30px 30px;
+}
+.projects .projectsList .cert1 .certDetails .certSubname p{
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+/* Contact */
+.contact{
+    background-color: var(--gray);
+    padding: 8rem;
+}
+.contact .form{
+    width: 45%;
+}
+
+.contact .form h2{
+    color: var(--lightGray);
+    font-size: 2rem;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.contact .form .userContact input, .contact .form .userContact textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--blue);
+    outline: none;
+    margin: 13px 0;
+    font-family: var(--subheading-font);
+}
+.contact .form .userContact input:focus, .contact .form .userContact textarea:focus{
+    border: 2px solid var(--green);
+    outline: none;
+}
+.contact .form .userContact input::placeholder{
+    font-size: 1.1rem;
+    height: 80%;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--black);
+    color: var(--lightGray);
+    font-family: var(--subheading-font);
+}
+.footer .footAdmin h4, .footer .footMessage p{
+    font-size: 1.1rem;
+}
+
+/* Media Query */
+@media screen and (max-width:1042px){
+    body nav .nav .nav-item a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:991px){
+    body nav .logoNav{
+        display: none;
+    }
+    body nav .barButton{
+        display: contents;
+    }
+}
+@media screen and (max-width:768px){
+    
+}
+@media screen and (max-width:496px){
+    
 }
